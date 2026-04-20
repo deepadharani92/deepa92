@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main{
+public static void main(String[] args){
+Scanner sc= new Scanner(System.in);
+int n = sc.nextInt();
+int[] hash = new int[n];
+for(int i=0;i<n;i++){
+hash[i]=-1;
+}
+for(int i=0;i<n;i++){
+int key = sc.nextInt();
+int h =key%n;
+for(int j=0;j<n;j++){
+int index =(h + j)%n;
+if(hash[index] ==-1){
+hash[index] = key;
+break;
+}
+}
+}
+for(int i=0;i<n;i++){
+System.out.println("Element at position " + i + ":" + hash[i]);
+}
+}}
